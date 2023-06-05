@@ -26,10 +26,10 @@ function Header() {
             <div className='header_nav' >
 
                 <div onClick={()=> state.user ? handleAuthentication() : navigate('/login')} className='header_option'>
-                    <span className='header_optionLineOne' > {state.user ? state.user.email :'Hello guest'}</span>
+                    <span className='header_optionLineOne' > Hello {state.user ? state.user.email :'Guest'}</span>
                     <span className='header_optionLineTwo' > {state.user ? 'Sign Out' : 'Sign In'}</span>
                 </div>
-                <div className='header_option'>
+                <div onClick={()=> navigate('/orders')} className='header_option'>
                     <span className='header_optionLineOne' >Returns</span>
                     <span className='header_optionLineTwo' >&Orders</span>
                 </div>
